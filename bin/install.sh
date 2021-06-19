@@ -3,4 +3,4 @@ pip3 install flake8
 pip3 install pep8
 
 # tmux
-sudo apt install tmux
+sudo apt -y install tmux
