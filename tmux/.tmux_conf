@@ -1,0 +1,76 @@
+# making fish as default shell
+# set-option -g default-shell /usr/local/etc/fish
+
+# tmuxを256色表示できるようにする
+set-option -g default-terminal screen-256color
+set -g terminal-overrides 'xterm:colors=256'
+
+# set prefix key
+set-option -g prefix C-g
+unbind C-b
+bind C-g send-prefix
+
+# ステータスバーをトップに配置する
+set-option -g status-position top
+
+# 左右のステータスバーの長さを決定する 
+set-option -g status-left-length 90
+set-option -g status-right-length 90
+
+# #P => ペイン番号
+# 最左に表示
+set-option -g status-left '#H:[#P]'
+
+# Wi-Fi、バッテリー残量、現在時刻
+# 最右に表示
+set-option -g status-right '#(wifi) #(battery --tmux) [%Y-%m-%d(%a) %H:%M]'
+
+# ステータスバーを1秒毎に描画し直す
+set-option -g status-interval 1
+
+# センタライズ（主にウィンドウ番号など）
+set-option -g status-justify centre
+
+# ステータスバーの色を設定する
+set-option -g status-bg "colour238"
+
+# status line の文字色を指定する。
+set-option -g status-fg "colour255"
+
+# highlight the active pane with cyan
+set -g pane-active-border-style bg="cyan"
+
+# set status 
+#set-option -g status-right '#(wifi) #(battery --tmux) [%Y-%m-%d(%a) %H:%M]
+
+# transport across pane in vim's key bind
+bind -r k select-pane -U
+bind -r j select-pane -D
+bind -r h select-pane -L
+bind -r l select-pane -R
+
+# resize pane 
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# split window
+bind + split-window -v
+bind - split-window -h
+
+# 番号基準値を変更
+set-option -g base-index 1
+
+# マウス操作を有効にする
+set-option -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
+
+# enable copy mode
+setw -g mode-keys vi
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi V send -X select-line
+bind -T copy-mode-vi C-v send -X rectangle-toggle
+bind -T copy-mode-vi y send -X copy-selection
+bind -T copy-mode-vi Y send -X copy-line
+bind-key C-p paste-buffer
