@@ -12,13 +12,12 @@ sudo apt -y install tmux
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:fish-shell/release-3
 sudo apt-get install -y fish
-#exec fish
-# fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 
 ## fisher
-#fisher install oh-my-fish/plugin-balias
-#fisher install oh-my-fish/theme-bobthefish
-#fisher install jethrokuan/z
-#fisher install oh-my-fish/plugin-peco
-#fisher install jethrokuan/fzf
-#exec bash
+fish -c "fisher install \
+                        oh-my-fish/plugin-balias \
+                        oh-my-fish/theme-bobthefish \
+                        jethrokuan/z \
+                        oh-my-fish/plugin-peco \
+                        jethrokuan/fzf"
