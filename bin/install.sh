@@ -3,8 +3,8 @@ pip3 install flake8
 pip3 install pep8
 
 # dotfiles' dir
-#DOT_DIR="$HOME/Git/dotfiles"
-DOT_DIR="/work"
+DOT_DIR="$HOME/Git/dotfiles"
+#DOT_DIR="/work"
 
 # git
 sudo apt -y install git
