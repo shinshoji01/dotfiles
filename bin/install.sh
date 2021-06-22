@@ -33,7 +33,7 @@ fish -c "fisher install \
 ln -sf ${DOT_DIR}/vim/.vimrc ~/.vimrc
 
 # tmux
-ln -sf ${DOT_DIR}/tmux/.tmux.conf ~/.tmux.conf
+ln -sf ${DOT_DIR}/tmux/.tmux_conf ~/.tmux.conf
 
 # fish
 mkdir -p ~/.config/fish/functions
