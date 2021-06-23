@@ -2,6 +2,9 @@
 pip3 install flake8
 pip3 install pep8
 
+# installation of peco
+sudo apt  install peco
+
 # dotfiles' dir
 DOT_DIR="$HOME/Git/dotfiles"
 #DOT_DIR="/work"
