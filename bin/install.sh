@@ -26,6 +26,9 @@ fish -c "fisher install \
                         oh-my-fish/plugin-peco \
                         jethrokuan/fzf"
 
+# Git clone
+git clone https://github.com/shinshoji01/dotfiles.git ${DOT_DIR}
+
 # ----------------------------------------------------------------------------------------- #
 # symbolic link
 
