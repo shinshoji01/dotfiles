@@ -34,6 +34,8 @@ balias gs "git status"
 balias ... "cd ../../"
 balias .... "cd ../../../"
 balias drun "docker run --rm -it -v ~:/work"
+balias get_current_gitbranchname "git branch -a | grep -E '^\*' | sed -e 's/^\* //'"
+balias gp "git push origin (get_current_gitbranchname)"
 
 # peco
 function fish_user_key_bindings
