@@ -25,9 +25,9 @@ gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
 ## Switch Keyboard
 - for mac
 ```bash
-bash -c "$(https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_mac.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_mac.sh)"
 ```
 - for ubuntu
 ```bash
-bash -c "$(https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_ubuntu.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_ubuntu.sh)"
 ```
