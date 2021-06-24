@@ -30,7 +30,12 @@ fish -c "fisher install \
                         jethrokuan/fzf"
 
 # Git clone
-git clone https://github.com/shinshoji01/dotfiles.git ${DOT_DIR}
+if [ -d "$DOT_DIR" ]; then
+  cd $DOT_DIR
+  git pull origin main
+else
+  git clone https://github.com/shinshoji01/dotfiles.git ${DOT_DIR}
+fi
 
 # ----------------------------------------------------------------------------------------- #
 # symbolic link
