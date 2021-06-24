@@ -21,3 +21,13 @@ gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
 - run tilix
   - command: `shift` + `space`
   - hotkey: `tilix --quake`
+
+## Switch Keyboard
+- for mac
+```bash
+bash -c "$(https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_mac.sh)"
+```
+- for ubuntu
+```bash
+bash -c "$(https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_ubuntu.sh)"
+```
