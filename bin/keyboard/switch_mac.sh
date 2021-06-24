@@ -9,5 +9,6 @@ git clone https://github.com/shinshoji01/qmk_firmware.git ${DOT_DIR}
 
 # qmk firmware
 cd ${DOT_DIR}
+git pull origin master
 qmk compile -kb 7skb -km sho-7skb 
 qmk flash -kb 7skb -km sho-7skb
