@@ -23,6 +23,10 @@ gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
   - hotkey: `tilix --quake`
 
 ## Switch Keyboard
+- for installation
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/install.sh)"
+```
 - for mac
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_mac.sh)"
