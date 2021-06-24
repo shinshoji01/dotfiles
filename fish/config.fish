@@ -30,13 +30,17 @@ set -x LS_COLORS 'tw=0;107:ow=0;107'
 # fish_vi_key_bindings
 
 # balias
-balias gs "git status"
+## folder
 balias ... "cd ../../"
 balias .... "cd ../../../"
+## docker
 balias drun "docker run --rm -it -v ~/:/work"
 balias drun_local "docker run --rm -it -v ~/:/work -p 8080:8080"
+## git
+balias gs "git status"
 balias get_current_gitbranchname "git branch -a | grep -E '^\*' | sed -e 's/^\* //'"
 balias gp "git push origin (get_current_gitbranchname)"
+## others
 balias killjl "kill -9 (ps aux | grep jupyter | cut -d ' ' -f 13)"
 
 # peco
