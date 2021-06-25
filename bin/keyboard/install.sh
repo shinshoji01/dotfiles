@@ -12,6 +12,9 @@ else
   git clone https://github.com/shinshoji01/qmk_firmware.git ${QMK_DIR}
 fi
 
+# install some dependencies
+pip3 install wheel
+
 # qmk firmware
 brew install qmk/qmk/qmk
 cd ${QMK_DIR}
