@@ -4,8 +4,13 @@ QMK_DIR="$HOME/Git/qmk_firmware"
 # git
 sudo apt -y install git
 
-# git clone
-git clone https://github.com/shinshoji01/qmk_firmware.git ${QMK_DIR}
+# Git clone
+if [ -d "$QMK_DIR" ]; then
+  cd $QMK_DIR
+  git pull origin main
+else
+  git clone https://github.com/shinshoji01/qmk_firmware.git ${QMK_DIR}
+fi
 
 # qmk firmware
 brew install qmk/qmk/qmk
