@@ -21,3 +21,4 @@ cd ${QMK_DIR}
 git pull origin master
 ./util/qmk_install.sh
 make git-submodule
+qmk setup
