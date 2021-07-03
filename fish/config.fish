@@ -41,6 +41,8 @@ balias dp "docker-compose"
 balias gs "git status"
 balias get_current_gitbranchname "git branch -a | grep -E '^\*' | sed -e 's/^\* //'"
 balias gp "git push origin (get_current_gitbranchname)"
+balias gpn "git pull origin main"
+balias gpr "git pull origin master"
 ## others
 balias killjl "kill -9 (ps aux | grep jupyter | cut -d ' ' -f 13)"
 
