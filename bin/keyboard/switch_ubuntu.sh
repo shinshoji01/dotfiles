@@ -4,5 +4,5 @@ QMK_DIR="$HOME/Git/qmk_firmware"
 # qmk firmware
 cd ${QMK_DIR}
 git pull origin master
-qmk compile -kb 7skb -km sho-7skb_ubuntu
-qmk flash -kb 7skb -km sho-7skb_ubuntu
+qmk compile -kb crkbd -km sho-crkbd_ubuntu
+qmk flash -kb crkbd -km sho-crkbd_ubuntu
