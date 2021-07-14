@@ -37,6 +37,7 @@ balias .... "cd ../../../"
 balias drun "docker run --rm -it -v ~/:/work"
 balias drun_local "docker run --rm -it -v ~/:/work -p 8080:8080"
 balias dp "docker-compose"
+balias drmall "docker rm -f (docker ps -a -q)"
 ## git
 balias gs "git status"
 balias get_current_gitbranchname "git branch -a | grep -E '^\*' | sed -e 's/^\* //'"
