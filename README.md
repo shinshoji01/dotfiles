@@ -35,3 +35,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/mai
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_ubuntu.sh)"
 ```
+- for game
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/shinshoji01/dotfiles/main/bin/keyboard/switch_game.sh)"
+```
