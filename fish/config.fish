@@ -46,6 +46,7 @@ balias gpn "git pull origin main"
 balias gpr "git pull origin master"
 ## others
 balias killjl "kill -9 (ps aux | grep jupyter | cut -d ' ' -f 13)"
+balias cl "clear"
 
 # peco
 function fish_user_key_bindings
