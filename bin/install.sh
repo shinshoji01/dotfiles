@@ -37,6 +37,13 @@ else
   git clone https://github.com/shinshoji01/dotfiles.git ${DOT_DIR}
 fi
 
+# NeoBundle
+mkdir ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
+# copy on vim -> clipboard
+sudo apt install vim-gtk3
+
 # ----------------------------------------------------------------------------------------- #
 # symbolic link
 
