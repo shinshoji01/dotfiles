@@ -7,9 +7,9 @@ set-option -g default-terminal screen-256color
 set -g terminal-overrides 'xterm:colors=256'
 
 # set prefix key
-set-option -g prefix C-g
+set-option -g prefix C-f
 unbind C-b
-bind C-g send-prefix
+bind C-f send-prefix
 
 # ステータスバーをトップに配置する
 set-option -g status-position top

@@ -168,3 +168,6 @@ let g:SuperTabContextDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionType = "<c-n>"
 "let g:jedi#rename_command = "<c-r>"
 let g:jedi#force_py_version="3"
+
+"--------------- Others ---------------
+set clipboard+=unnamedplus

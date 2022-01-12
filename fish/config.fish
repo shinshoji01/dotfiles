@@ -46,7 +46,9 @@ balias gpn "git pull origin main"
 balias gpr "git pull origin master"
 ## others
 balias killjl "kill -9 (ps aux | grep jupyter | cut -d ' ' -f 13)"
+balias killpy "sudo kill -9 (pgrep python3)"
 balias cl "clear"
+balias ns "nvidia-smi"
 
 # peco
 function fish_user_key_bindings
