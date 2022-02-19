@@ -171,3 +171,4 @@ let g:jedi#force_py_version="3"
 
 "--------------- Others ---------------
 set clipboard+=unnamedplus
+inoremap <TAB><TAB> <C-x><C-f>
