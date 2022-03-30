@@ -49,6 +49,10 @@ balias killjl "kill -9 (ps aux | grep jupyter | cut -d ' ' -f 13)"
 balias killpy "sudo kill -9 (pgrep python3)"
 balias cl "clear"
 balias ns "nvidia-smi"
+balias edit_fish "vim ~/Git/dotfiles/fish/config.fish"
+balias edit_tmux "vim ~/Git/dotfiles/tmux/.tmux_conf"
+balias edit_vim "vim ~/Git/dotfiles/vim/.vimrc"
+#balias tmuxssh "tmux select-pane -P 'fg=colour0,bg=colour152' && ssh $* && trap "tmux select-pane -P 'fg=default,bg=default'" 0 1 2 3"
 
 # peco
 function fish_user_key_bindings
@@ -60,3 +64,17 @@ end
 #set -U FZF_DISABLE_KEYBINDINGS 1
 
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+function ssh
+        # tmux起動時
+        if [ -n (printenv TMUX)  ] ;
+                tmux select-pane -P 'fg=colour231,bg=colour237'
+
+                # 通常通りコマンド続行
+                command ssh $argv
+                # デフォルトの色設定に戻す
+                tmux select-pane -P 'fg=default,bg=default'
+        else
+                command ssh $argv
+        end
+end
