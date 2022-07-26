@@ -16,7 +16,7 @@ set tabstop=4 " 画面上でタブ文字が占める幅
 set softtabstop=4 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
 " set autoindent " 改行時に前の行のインデントを継続する
 " set smartindent " 改行時に前の行の構文をチェックし次の行のインデントを増減する
-" set shiftwidth=4 " smartindentで増減する幅
+set shiftwidth=4 " smartindentで増減する幅 or '<<'や'>>'で移動する幅
 
 " search
 set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
@@ -169,6 +169,18 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 "let g:jedi#rename_command = "<c-r>"
 let g:jedi#force_py_version="3"
 
-"--------------- Others ---------------
+"--------------- Save to Clipboard ---------------
 set clipboard+=unnamedplus
-inoremap <TAB><TAB> <C-x><C-f>
+
+"--------------- Path Completion ---------------
+inoremap <C-g><C-g> <C-x><C-f>
+
+"--------------- Python Execution ---------------
+nmap <F5> <Esc>:w<CR>:!clear;python3 %<CR>
+
+"--------------- Auto Indent ---------------
+set autoindent
+
+"--------------- Enable and Unenable Paste Mode ---------------
+nmap <F7> <Esc>:set noautoindent<CR>
+nmap <F9> <Esc>:set autoindent<CR>
