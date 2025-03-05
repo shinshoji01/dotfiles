@@ -6,7 +6,7 @@ set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コー�
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
 
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 syntax on
 
@@ -29,6 +29,7 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR> " ESCキー2度押しで�
 set whichwrap=b,s,h,l,<,>,[,],~ " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
 set number " 行番号を表示
 set cursorline " カーソルラインをハイライト
+set cursorcolumn " カーソルラインをハイライト
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
 nnoremap k gk
@@ -101,7 +102,7 @@ NeoBundle 'tomasr/molokai' " カラースキームmolokai
 
 NeoBundle 'itchyny/lightline.vim' " ステータスラインの表示内容強化
 NeoBundle 'bronson/vim-trailing-whitespace' " visualize redundant while spaces
-NeoBundle 'Yggdroot/indentLine' " visualize indent line
+"NeoBundle 'Yggdroot/indentLine' " visualize indent line
 NeoBundle 'scrooloose/syntastic' " 構文エラーチェック
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim' " プロジェクトに入ってるESLintを読み込む
 "NeoBundle 'akiomik/git-gutter-vim'
@@ -128,6 +129,7 @@ NeoBundleCheck
 if neobundle#is_installed('molokai') " molokaiがインストールされていれば
     colorscheme molokai " カラースキームにmolokaiを設定する
 endif
+"colorscheme industry
 
 "if neobundle#is_installed('pyceberg')
 "    colorscheme pyceberg
@@ -170,7 +172,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:jedi#force_py_version="3"
 
 "--------------- Save to Clipboard ---------------
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 
 "--------------- Path Completion ---------------
 inoremap <C-g><C-g> <C-x><C-f>
@@ -184,3 +186,4 @@ set autoindent
 "--------------- Enable and Unenable Paste Mode ---------------
 nmap <F7> <Esc>:set noautoindent<CR>
 nmap <F9> <Esc>:set autoindent<CR>
+

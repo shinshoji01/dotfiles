@@ -54,6 +54,23 @@ balias edit_tmux "vim ~/Git/dotfiles/tmux/.tmux_conf"
 balias edit_vim "vim ~/Git/dotfiles/vim/.vimrc"
 #balias tmuxssh "tmux select-pane -P 'fg=colour0,bg=colour152' && ssh $* && trap "tmux select-pane -P 'fg=default,bg=default'" 0 1 2 3"
 
+function sendtolocal_sribd --argument file
+    scp -ri ~/.ssh/id_rsa_gpu shoinoue@10.26.6.81:"$file" /Users/shoahoshoaho/Downloads/
+end
+
+function sendfromlocal_sribd --argument file dir
+    scp -ri ~/.ssh/id_rsa_gpu $file shoinoue@10.26.6.81:"$dir" 
+end
+
+function sendtolocal --argument file
+    scp -ri ~/.ssh/id_rsa_gpu sc100141@174.0.250.88:"$file" /Users/shoahoshoaho/Downloads/
+end
+
+function sendfromlocal --argument file dir
+    scp -ri ~/.ssh/id_rsa_gpu $file sc100141@174.0.250.88:"$dir" 
+end
+
+
 # peco
 function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
@@ -78,3 +95,19 @@ function ssh
                 command ssh $argv
         end
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /Users/shoahoshoaho/miniconda3/bin/conda
+    eval /Users/shoahoshoaho/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/Users/shoahoshoaho/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/shoahoshoaho/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/Users/shoahoshoaho/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+set -U fish_user_paths /Users/shoahoshoaho/Library/Python/3.9/bin $fish_user_paths
+

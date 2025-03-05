@@ -82,3 +82,5 @@ bind-key C-p paste-buffer
 
 set-option -g default-command "reattach-to-user-namespace -l fish"
 bind C-q run-shell 'reattach-to-user-namespace tmux-pbcopy'
+
+set-option -g repeat-time 0
